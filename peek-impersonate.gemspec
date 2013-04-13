@@ -10,7 +10,7 @@ Gem::Specification.new do |gem|
   gem.email         = ['bensie@gmail.com']
   gem.description   = %q{Impersonate users from peek.}
   gem.summary       = %q{Impersonate users from peek.}
-  gem.homepage      = 'https://github.com/amigobooth/peek-impersonate'
+  gem.homepage      = 'https://github.com/bensie/peek-impersonate'
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
