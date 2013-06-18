@@ -1,0 +1,18 @@
+<% if current_user %>
+
+  <% if current_staff_user %>
+<small>impersonating</small>&nbsp;
+  <% else %>
+<small>signed in as</small>&nbsp;
+  <% end %>
+  <% if current_user.staff? %>
+    <%= link_to current_user.email, "#", id: view.dom_id, data: { pk: current_user.id, resource: 'impersonate/user', name: 'id', :'original-title' => 'Select user to impersonate...' } %>
+  <% else %>
+    <strong>Not allowed to impersonate</strong>&nbsp;
+  <% end %>
+
+<% else %>
+
+  <strong>Not signed in</strong>
+
+<% end %>
