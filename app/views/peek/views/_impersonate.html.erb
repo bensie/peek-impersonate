@@ -1,3 +1,0 @@
-<strong><%= current_master.name %></strong>&nbsp;
-<small>signed in as</small>&nbsp;
-<%= link_to current_user.email, "#", rel: "popover", data: { title: "Impersonate User", content: "#{form_tag("/masters/impersonate", method: :post) { text_field_tag :email, "", class: "span2", placeholder: "email", autofocus: true }}", placement: "bottom", html: true } %>
